@@ -7,6 +7,9 @@ class UrlMappings {
 			}
 		}
 
+		"/api/messages"(controller: "message", action: "index", parseRequest: true)
+		"/api/message/$id?"(resource: "message")
+
 		"/"(view:"/index")
 		"500"(view:'/error')
 	}
